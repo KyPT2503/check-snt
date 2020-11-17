@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="sntCheck" onchange="sntCheck()">
+<script>
+    function snt()
+    {
+        let number=+document.getElementById('sntCheck').value;
+        if(number<2)
+        {
+            return false;
+        }
+        else
+        {
+            for(let i=2;i<=number/2;i++)
+            {
+                if(number%i==0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    function sntCheck()
+    {
+        if(snt()==true) document.write('snt');
+        else document.write('not a snt');
+    }
+</script>
+</body>
+</html>
